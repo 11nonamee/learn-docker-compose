@@ -2,16 +2,10 @@ version: '3.8'
 services:
   maven:
     build: mavenbuild
-    volumes:
-      - DCPBL:/home/vanya/docker-c/maven
   prod:
     image: tomcat:alpine
-    volumes:
-      - DCPBL:/home/vanya/docker-c/prod
     volumes_from:
       - maven
     ports:
       - "8080:80"
-volumes:
-  DCPBL:
 
