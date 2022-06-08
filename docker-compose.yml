@@ -9,7 +9,7 @@ services:
     volumes:
       - DCPBL:/home/vanya/docker-c/prod
     volumes_from:
-      - meven
+      - maven
     ports:
       - "8080:80"
 volumes:
