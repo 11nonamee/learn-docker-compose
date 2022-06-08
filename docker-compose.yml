@@ -4,6 +4,8 @@ services:
     build: mavenbuild
     ports: 
       - "8080:80"
+    volumes:
+      - ./tomcat:/var/lib/tomcat
   ##prod:
     ##image: tomcat:alpine
     ##volumes_from:
