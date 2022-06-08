@@ -2,14 +2,15 @@ version: '3.8'
 services:
   maven:
     build: mavenbuild
-    ports: 
-      - "8080:80"
     volumes:
-      - ./tomcat:/var/lib/tomcat
-  ##prod:
-    ##image: tomcat:alpine
-    ##volumes_from:
-     ## - maven
-  ##  ports:
-    ##  - "8080:80"
+      - data_volumes:/data/build
+  prod:
+    image: tomcat:alpine
+    volumes:
+      - data_volumes/data/app1
+      - ./hello-1.0.war:/usr/local/tomcat/webapps
+    ports:
+      - "8080:80"
+volumes:
+  data_volumes:
 
