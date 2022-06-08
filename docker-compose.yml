@@ -1,0 +1,18 @@
+version: '3'
+services:
+  maven:
+    build: mavenbuild
+    environment:
+      - name=value
+    volumes:
+      -
+  prod:
+    image: tomcat:9.0
+    environment:
+      - 
+    volumes:
+      -
+    ports:
+      - "8080:80"
+  volumes:
+  
