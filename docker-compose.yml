@@ -2,7 +2,8 @@ version: '3.8'
 services:
   maven:
     build: mavenbuild
-    ports: "8080:80"
+    ports: 
+      - "8080:80"
   ##prod:
     ##image: tomcat:alpine
     ##volumes_from:
