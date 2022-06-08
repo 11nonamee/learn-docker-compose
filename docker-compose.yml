@@ -3,7 +3,7 @@ services:
   maven:
     build: mavenbuild
     volumes:
-      - DCPBL:/home/vanya/docker-c/prod
+      - DCPBL:/home/vanya/docker-c/maven
   prod:
     image: tomcat:alpine
     volumes:
