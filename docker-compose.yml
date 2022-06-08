@@ -8,6 +8,8 @@ services:
     image: tomcat:alpine
     volumes:
       - DCPBL:/home/vanya/docker-c/prod
+    volumes_from:
+      - meven
     ports:
       - "8080:80"
 volumes:
