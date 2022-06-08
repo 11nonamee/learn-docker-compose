@@ -1,18 +1,15 @@
-version: '3'
+version: '3.8'
 services:
   maven:
     build: mavenbuild
-    environment:
-      - name=value
     volumes:
-      -
+      - DCPBL:/Docker-C/maven
   prod:
-    image: tomcat:9.0
-    environment:
-      - 
+    image: tomcat:alpine
     volumes:
-      -
+      - DCPBL:/Docker-C/tomcat
     ports:
       - "8080:80"
-  volumes:
-  
+volumes:
+  DCPBL:
+
